@@ -1,0 +1,32 @@
+PREC= Normal            # Precision of the calculation
+ALGO= Normal            # Selects the block Davidson diagonalization algorithm
+LREAL= Auto             # Evaluation of projection operators in reciprocal space
+ENCUT= 500              # Plane wave cutoff in eV
+EDIFF= 1E-5             # Converge DFT energy till variation is less than 1E-5 eV
+NELMIN= 5               # Minimum number of times to run SCF loop, irrespective of EDIFF convergence criterion
+
+# Accelerating convergence through electronic smearing
+ISMEAR= 0               # Gaussian smearing to accelerate convergence
+SIGMA= 0.01             # Width of Gaussian for smearing electronic distribution
+
+# Spin polarization setting
+#ISPIN= 2                # Spin-polarized calculation, i.e., taking spin into account
+
+# Output settings
+LCHARG= .TRUE.         # Do not write CHGCAR
+LWAVE= .TRUE.          # write WAVECAR
+LORBIT= 11
+
+# Parallelization options
+#NPAR= 16                # Number of bands that are treated in parallel; NPAR ~ sqrt(number of cores)
+
+# Exchange-correlation functional settings
+GGA= PE                 # Chooses PBE XC functional
+IVDW= 12                # Adds dispersion to DFT using Grimme's D3 method, with Becke-Johnson (BJ) damping, see: 10.1021/jp501237c
+
+# Cell optimization details
+IBRION= 2              # Optimize ion positions/DIIS
+ISIF= 2                # Optimize simulation cell, i.e., ion positions
+EDIFFG= -0.03          # Stop optimization if forces on all atoms are less than 0.01 eV/A
+ISYM= 0
+NSW=500                # Number of optimization steps to carry out

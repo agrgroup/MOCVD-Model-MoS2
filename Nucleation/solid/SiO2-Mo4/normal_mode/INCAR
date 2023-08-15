@@ -1,0 +1,37 @@
+SYSTEM = DIPOL Correction
+
+######################################### OUTPUT ########################################
+LCHARG = .FALSE.
+LWAVE = .FALSE.
+
+######################################### PRECISION ########################################
+ENCUT = 500
+EDIFF = 1.0E-5
+EDIFFG = -1.0E-4
+
+######################################### ALGORITHMS ########################################
+ALGO = Normal
+IBRION = 3
+ICHAIN = 1
+ISIF = 2
+ISMEAR = 0
+ISPIN = 2
+ISYM = 0
+LREAL = Auto
+NFREE = 2
+
+######################################### CORRECTIONS ########################################
+ADDGRID = .TRUE.
+LCORR = .TRUE.
+
+######################################### LIMITS ########################################
+NELM = 250
+NSW = 55
+
+# Exchange-correlation functional settings
+GGA= PE # Chooses PBE XC functional
+IVDW= 12 # Adds dispersion to DFT using Grimme's D3 method, with Becke-Johnson (BJ) damping, see: 10.1021/jp501237c
+
+######################################### MISCELLANEOUS ########################################
+POTIM = 0.0
+SIGMA = 0.01

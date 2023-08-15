@@ -1,0 +1,6 @@
+Automatic mesh
+0              ! number of k-points = 0 ->automatic generation scheme
+Monkhorst-Pack ! select Monkhorst-Pack (first letter is significant)
+1  1  1        ! size of mesh (3x3x1 points along b1, b2, b3)
+0. 0. 0.       ! shift of the k-mesh
+
